@@ -22,7 +22,7 @@ class Dog:
         if isinstance(name, str) and 1 <= len(name) <= 25:
             self._name = name.title()
         else:
-            raise ValueError(
+           print(
                 "Name must be string between 1 and 25 characters.")
 
     name = property(get_name, set_name)
@@ -34,6 +34,6 @@ class Dog:
         if breed in APPROVED_BREEDS:
             self._breed = breed
         else:
-            raise ValueError("Breed must be in list of approved breeds.")
+            print("Breed must be in list of approved breeds.")
 
     breed = property(get_breed, set_breed)
